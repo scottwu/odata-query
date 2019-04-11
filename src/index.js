@@ -273,7 +273,7 @@ function handleValue(value) {
   if (typeof value === 'string') {
     return `'${escapeIllegalChars(value)}'`;
   } else if (value instanceof Date) {
-    return value.toISOString();
+    return `datetime'${value.toISOString()}'`;
   } else if (value instanceof Number) {
     return value;
   } else if (Array.isArray(value)) {
